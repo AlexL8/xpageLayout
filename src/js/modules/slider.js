@@ -1,14 +1,14 @@
 const dataSlider = {
 	content1: {
-		imgUrl: "../images/3.webp",
+		imgUrl: "./images/3.webp",
 		title: "Найди с кем поиграть в баскет",
 	},
 	content2: {
-		imgUrl: "../images/2.webp",
+		imgUrl: "./images/2.webp",
 		title: "мы собрали секции для детей по всему городу",
 	},
 	content3: {
-		imgUrl: "../images/1.webp",
+		imgUrl: "./images/1.webp",
 		title: "Полезные материалы и видеоуроки в нашем приложении",
 	},
 };
