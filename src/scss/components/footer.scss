@@ -1,0 +1,141 @@
+@import "../config/functions";
+@import "../config/mixins";
+
+.footer__container {
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	gap: 0px 0px;
+	grid-template-areas: "title qr";
+}
+
+.footer__title-zone {
+	grid-area: title;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.footer__title {
+	font-family: $DrukB;
+	text-transform: $textUp;
+	font-size: 48px;
+	line-height: 57.6px;
+	width: 100%;
+	max-width: 1138px;
+	height: 100%;
+	max-height: 232px;
+	margin-bottom: 32px;
+	z-index: 1;
+}
+
+.platform-block {
+	display: flex;
+	gap: 37px;
+	margin-bottom: 307px;
+	max-width: 355px;
+	z-index: 1;
+}
+
+.footer__signature {
+	margin-bottom: 38px;
+}
+
+.footer__link {
+	color: $desktop-black;
+	font-family: $DrukB;
+	text-transform: $textUp;
+	font-size: 12px;
+	line-height: 16.8px;
+	z-index: 1;
+	position: relative;
+}
+
+.footer__qrCode-zone {
+	grid-area: qr;
+}
+
+.qrCode-zone {
+	position: relative;
+}
+
+.qrCode-zone__bgcImg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.qrCode-zone__qrcodeImg {
+	position: absolute;
+	z-index: 1;
+	right: 268px;
+	bottom: 227px;
+}
+
+.footer__mobile-bgcImg {
+	display: none;
+}
+
+@media (max-width: 1620px) {
+	.platform-block {
+		margin-top: 32px;
+	}
+}
+
+@media (max-width: 1510px) {
+	.footer__title {
+		font-size: 38px;
+		line-height: 47.6px;
+	}
+}
+
+@media (max-width: 1400px) {
+	.qrCode-zone__qrcodeImg {
+		display: none;
+	}
+}
+
+@media (max-width: 992px) {
+	.platform-block {
+		margin-top: 52px;
+	}
+}
+
+@media (max-width: 768px) {
+	.platform-block {
+		margin-top: 72px;
+	}
+}
+@media (max-width: 576px) {
+	.qrCode-zone__bgcImg {
+		display: none;
+	}
+	.footer__title {
+		font-size: 20px;
+		line-height: 26px;
+		max-width: 296px;
+		margin-bottom: 20px;
+	}
+	.platform-block {
+		margin-top: 0;
+		margin-bottom: 165px;
+		flex-direction: column;
+		gap: 24px;
+		max-width: 134px;
+	}
+	.footer__link {
+		font-size: 10px;
+		line-height: 14px;
+	}
+	.footer__mobile-bgcImg {
+		display: block;
+		position: absolute;
+		width: 216px;
+		height: 214px;
+		right: -30px;
+		bottom: 60px;
+	}
+	.footer__signature {
+		margin-bottom: 25px;
+	}
+}

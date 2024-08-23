@@ -1,0 +1,141 @@
+@import "../config/functions";
+@import "../config/mixins";
+
+.header__container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	border-radius: $border-rad20;
+	background-color: $desktop-white;
+	margin-bottom: 8px;
+}
+
+.header__nav {
+	display: flex;
+}
+
+.header__logo {
+	display: block;
+	background-image: url("../images/logo-XPAGE.svg");
+	background-size: cover;
+	width: 99px;
+	height: 52px;
+	margin-right: 65px;
+}
+
+.list {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.list__item:not(:last-child) {
+	margin-right: 23px;
+}
+
+.list__link {
+	list-style: none;
+	text-decoration: none;
+	color: $desktop-black;
+	font-size: $fsz14;
+	font-family: $DrukB;
+	font-weight: 700;
+	text-transform: $textUp;
+}
+
+.authorization {
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+}
+
+.authorization__menu {
+	margin-right: 22px;
+}
+
+.authorization__button {
+	position: relative;
+	color: $desktop-black;
+	text-transform: $textUp;
+	font-family: $DrukB;
+	font-weight: 700;
+	line-height: 19.6px;
+	font-size: $fsz14;
+	cursor: pointer;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		background-image: url("../images/burger.svg");
+		background-size: 24px 24px;
+		right: 70px;
+		top: -1.5px;
+	}
+}
+
+.user-info {
+	background-color: $desktop-bgc;
+	border-radius: $border-rad20;
+	width: 100%;
+	max-width: 205px;
+	height: 38px;
+	display: flex;
+	align-items: center;
+}
+
+.user-info__nickname {
+	padding: 0 0 0 15px;
+	margin-right: 10px;
+	color: $desktop-black;
+	text-transform: $textUp;
+	font-family: $DrukB;
+	font-weight: 700;
+	font-size: $fsz14;
+	white-space: nowrap;
+}
+
+.user-info__avatar {
+	background-image: url("../images/avatar.svg");
+	background-size: cover;
+	width: 32px;
+	height: 32px;
+	margin: 3px;
+}
+
+.mobile__container {
+	display: none;
+	height: 48px;
+	padding: 0 12px;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: $border-rad20;
+	background-color: $desktop-white;
+	margin-bottom: 8px;
+}
+
+@media (max-width: 576px) {
+	.header__container {
+		display: none;
+	}
+	.wrapper {
+		margin: 12px 12px 0 12px;
+	}
+	.mobile__container {
+		display: flex;
+	}
+}
+
+@media (max-width: 1200px) {
+	.list {
+		display: none;
+	}
+}

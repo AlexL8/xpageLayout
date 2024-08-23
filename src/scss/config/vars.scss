@@ -1,0 +1,34 @@
+// отступы безопасности для контейнера
+$main-offset: 20;
+
+// максимальная ширина страницы
+$max-width: 1920;
+
+// минимальная ширина телефона
+$min-width: 320;
+
+// ширина контейнера из макета
+$container-width: 1880;
+
+// ширина контейнера с учетом padding слева и справа
+$max-width-container: $container-width + ($main-offset * 2);
+$header-height: 100;
+$footer-height: 100;
+
+// xpage vars
+$desktop-black: #202020;
+$desktop-white: #ffffff;
+$desktop-orange: #f36722;
+$desktop-green: #2e8d43;
+$desktop-bgc: #efefef;
+$border-color: rgba(196, 196, 196, 1);
+
+$fsz14: 14px;
+
+$border-rad20: 20px;
+$border-rad10: 10px;
+$textUp: uppercase;
+
+$DrukB: "DrukWideCyr", sans-serif;
+$Inter: "Inter", sans-serif;
+$Commissioner: "Commissioner", sans-serif;
